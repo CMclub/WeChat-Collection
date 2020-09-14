@@ -1,0 +1,48 @@
+
+<view class="description">
+    <textarea class="context" placeholder="宝物信息..." maxlength="200" bindinput="countText" bindblur="getText">
+        <text class="limitNum">{{limitNum|0}}/200</text>
+    </textarea>
+</view>
+
+<text >藏品类别:</text>
+<input bindblur="getKind"></input>
+
+<text >藏品器型:</text>
+<input bindblur="getEval_kind"></input>
+
+<text >藏品尺寸:</text>
+<input bindblur="getSize"></input>
+
+<text >藏品成色:</text>
+<input bindblur="getCondition"></input>
+
+<text >藏品名称:</text>
+<input bindblur="getEval_name"></input>
+
+<text >藏品断代:</text>
+<input bindblur="getEval_age"></input>
+
+
+
+
+<text style="color:red">最后一张放收藏人的二维码</text>
+<view class='ui_uploader_cell'>
+    <!-- 根据已选择的图片临时路径数组展示图片-->
+    <view class='ui_uploader_item' wx:for="{{uploaderList}}" wx:key="{{index}}">
+        <!-- 删除-->
+        <icon class='ui_uploader_item_icon' bindtap='clearImg' data-index="{{index}}" type="clear" size="25" color="red"/>
+        <!-- 图片-->
+        <image bindtap='showImg' data-index="{{index}}" src='{{item}}'></image>
+    </view>
+    <view class="add-img" src="../../images/select-img/add.png" bindtap='addImg' wx:if="{{showUpload}}" data-index="{{index}}">
+        <image class="camera" ></image>
+        <text class="up_title">照片</text>
+    </view>
+</view>
+
+
+
+
+<button class="sub-btn" type="primary" bindtap="check" disabled="{{}}">提交</button>
+

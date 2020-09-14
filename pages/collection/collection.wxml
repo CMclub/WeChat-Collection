@@ -1,0 +1,36 @@
+<!-- 页面容器 -->
+<view class="listWrap" >
+    <!-- 顶部图片 -->
+    <image class="img" mode="scaleToFill" src="{{infoList.num0}}" />
+    <!-- 样式没做 -->
+    <text class="text-c" >{{infoList.eval_name}}</text>
+    <text class="text-c" >{{infoList.eval_age}}</text>
+    <!-- 文字部分 -->
+    <text class="text-c" >尺寸： {{infoList.size}}</text>
+    <text class="text-c" >品相描述： {{infoList.condition}}</text>
+    <text class="text-c" >展品编号： {{infoList.id}}</text>
+    <text class="text-c" >{{infoList.text}}</text>
+    
+    <!-- 剩余图片展示 -->
+    <view class="contain-c" wx:for="{{infoList.url}}" data-item="{{item}}" >
+        <image class="img" mode="scaleToFill" src="{{item}}" />
+    </view>
+
+    <!-- 展示二维码 -->
+    <button wx:if="{{!QR}}" bindtap="setQR">联系藏家 | 展示二维码</button>
+    <view wx:if="{{QR}}">
+        <image class="img" mode="scaleToFill" src="{{infoList.num10}}" />
+    </view>
+
+    <!-- 收藏按钮和现有收藏人数 -->
+        <view class="contain-status">
+        <view class="item-status">
+            <!-- 状态图标 -->
+            <image class="img-icon"  src="/pictures/like.png" wx:if="{{liked==0}}" bindtap="like"/>
+            <image class="img-icon"  src="/pictures/liked.png" wx:if="{{liked==1}}" bindtap="like"/>
+            <!-- 状态数值 -->
+            <text class="text-status" >{{like}}</text>
+	    </view>
+    </view>
+
+</view>

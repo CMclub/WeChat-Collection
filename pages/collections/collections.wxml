@@ -1,0 +1,54 @@
+<!-- 最上边tab，自定义tab -->
+<tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+    <!-- 整个浏览列表 -->
+	<view class="listWrap" >
+        <!-- 单个展示容器 -->
+		<view class="contain-c" wx:for="{{infoList}}" data-item="{{item}}" bindtap="toInfo">
+            <!-- 单个item -->
+			<view class="item-c">
+                <!-- 图片 -->
+				<image class="img" mode="scaleToFill" src="{{item.url}}" />
+                <!-- footer -->
+                <view class="footer">{{item.eval_name}}</view>
+                <!-- 介绍文本容器 -->
+				<view class="text">
+                    <!-- 介绍文本样式 -->
+					<text class="text-c" >{{item.text}}
+                    </text>
+				</view>
+                <!-- 分割线 -->
+				<view class="line"></view>
+                <!-- 底栏容器 -->
+				<view class="contain-bottom">
+                    <!-- 状态栏容器 -->
+					<view class="contain-status">
+                        <!-- 单个状态 -->
+						<view class="item-status">
+                            <!-- 状态图标 -->
+							<image class="img-icon"  src="/pictures/like.png" wx:if="{{item.liked==0}}"/>
+							<image class="img-icon"  src="/pictures/liked.png" wx:if="{{item.liked==1}}"/>
+                            <!-- 状态数值 -->
+							<text class="text-status" >{{item.like}}</text>
+						</view>
+
+						<view class="item-status">
+							<image class="img-icon"  src="/pictures/msg.png"  mode="aspectFit"/>
+							<text class="text-status" >{{item.msg}}</text>
+						</view>
+
+						<view class="item-status">
+							<image class="img-icon" src="/pictures/view.png"/>
+							<text class="text-status" >{{item.view}}</text>
+						</view>
+
+					</view>
+					<text class="text-status" >予复讲堂</text>
+				</view>
+			</view>
+            <view class="line-b"></view>
+		</view>
+        
+
+
+	</view>
+</tabs>

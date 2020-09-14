@@ -1,0 +1,41 @@
+{
+  "debug": true,
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "专题",
+    "backgroundColor": "#ffffff",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark"
+  },
+  "pages": [
+    "pages/collections/collections",
+    "pages/collection/collection",
+    "pages/subject/subject",
+    
+    "pages/uploading/uploading",
+    "components/tabs/tabs"
+    
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "text": "专题",
+        "pagePath": "pages/subject/subject"
+      },
+      {
+        "text": "藏品详情",
+        "pagePath": "pages/collection/collection"
+      },
+      {
+        "text": "入门藏品",
+        "pagePath": "pages/collections/collections"
+      },
+      {
+        "text": "提交",
+        "pagePath": "pages/uploading/uploading"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

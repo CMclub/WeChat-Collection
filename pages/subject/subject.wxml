@@ -1,0 +1,48 @@
+<!-- 整个浏览列表 -->
+<view class="listWrap" >
+    <!-- 单个展示容器 -->
+    <view class="contain-c" wx:for="{{infoList}}" data-item="{{item}}" bindtap="toInfo">
+
+            <image class="img" mode="scaleToFill" src="{{item.url}}" />
+
+            <view class="wx-view_cPj0ok2" data-c_e_id="wx_viewe56ca6aa">
+
+                <text class="text-c" >这是一个图片啊啊啊这是一个图片嗷嗷嗷嗷这是一个图片啊啊啊这是一个图片嗷嗷嗷嗷
+                </text>
+                
+            </view>
+
+        <!-- <navigator class="listitem-navigator" data-c_e_id="wx_navigator4fac525f" hover-class="navigator-hover">
+            <image class="wx-image_tBcdCT2" data-c_e_id="wx_image1d2e067d" mode="aspectFill" src="http://qty83k.creatby.com/materials/origin/545bcfac69a09ea9ff9147614a2d541c_origin.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/545bcfac69a09ea9ff9147614a2d541c_origin.jpg); "/>
+            <view class="wx-view_cPj0ok2" data-c_e_id="wx_viewe417c266">
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_texte89d7efc">由微信小程序引发的设计思考</text>
+                <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_textd13ed938">Coolsite360推出国内第一款微信小程序可视化设计工具 集成小程序所有组件，在线进行小程序UI设计，支持Flex布局，可导出符合小程序标准的代码供后续开发。</text>
+            </view>
+        </navigator>
+        <navigator class="listitem-navigator" data-c_e_id="wx_navigator903f5310" hover-class="navigator-hover">
+            <image class="wx-image_tBcdCT2" data-c_e_id="wx_imagef6be50ca" mode="aspectFill" src="http://qty83k.creatby.com/materials/hd/cab2c0b5581e8d26b88a04c789028530_2048.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/hd/cab2c0b5581e8d26b88a04c789028530_2048.jpg); "/>
+            <view class="wx-view_cPj0ok2" data-c_e_id="wx_viewf976f03e">
+                <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text69cd5bf6">Coolsite360微信小程序编辑器11月4日公测</text>
+                <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text06b4eeec">Coolsite360推出国内第一款微信小程序可视化设计工具 集成小程序所有组件，在线进行小程序UI设计，支持Flex布局，可导出符合小程序标准的代码供后续开发。</text>
+            </view>
+        </navigator>
+        <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_view_d1db1ce4">
+            <navigator class="listitem-navigator" data-c_e_id="wx_navigator243185ad" hover-class="navigator-hover">
+                <image class="wx-image_tBcdCT2" data-c_e_id="wx_image63a203ae" mode="aspectFill" src="http://qty83k.creatby.com/materials/origin/e4446ae5ac790c9d98e1eff8d0ac1f1c_origin.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/e4446ae5ac790c9d98e1eff8d0ac1f1c_origin.jpg); "/>
+                <view class="wx-view_cPj0ok2" data-c_e_id="wx_viewd11f9c36">
+                    <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text588a88c1">从脑图到统计，十款专业运营工具推荐</text>
+                    <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text92f84285">Coolsite360推出国内第一款微信小程序可视化设计工具 集成小程序所有组件，在线进行小程序UI设计，支持Flex布局，可导出符合小程序标准的代码供后续开发。</text>
+                </view>
+            </navigator>
+        </view>
+        <view class="c-minheight bottomGrayboder wx-view_pOFBSt" data-c_e_id="wx_viewade02125">
+            <navigator class="listitem-navigator" data-c_e_id="wx_navigator198e0fe6" hover-class="navigator-hover">
+                <image class="wx-image_tBcdCT2" data-c_e_id="wx_imagebe1e68b6" mode="aspectFill" src="http://qty83k.creatby.com/materials/origin/65f972ac0d14f6061773977842f40a7e_origin.jpg" style="background-size: cover; background-position: center center; background-repeat: no-repeat; background-image: url(http://qty83k.creatby.com/materials/origin/65f972ac0d14f6061773977842f40a7e_origin.jpg); "/>
+                <view class="wx-view_cPj0ok2" data-c_e_id="wx_view916d4e22">
+                    <text class="c-block c-ellipse wx-text_TvHPc92" data-c_e_id="wx_text48cdb073">看位置触发作品集，来感受指尖滑动之美</text>
+                    <text class="c-block c-ellipse wx-text_LS2Jup2" data-c_e_id="wx_text56286b97">Coolsite360推出国内第一款微信小程序可视化设计工具 集成小程序所有组件，在线进行小程序UI设计，支持Flex布局，可导出符合小程序标准的代码供后续开发。</text>
+                </view>
+            </navigator>
+        </view> -->
+    </view>
+</view>
