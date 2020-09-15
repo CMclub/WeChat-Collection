@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+	keyword:'',
+	id:'',
+	name:[],
   },
 
   /**
@@ -62,5 +64,36 @@ Page({
    */
   onShareAppMessage: function () {
 
+  }
+  
+  
+  
+  getKeyword(e){
+  	this.setData({keyword: e.detail.value})
+      console.log('keyword:  ' + this.data.keyword)
+  }
+  
+  //搜索接口
+  search(){
+  	let _this = this;
+   	wx.request({
+        url: 'https://www.shoolos.cn/api/search/',
+        method:'GET',
+        data:{
+          keyword: _this.data.keyword,
+        },
+        success(res){
+          console.log(res)
+       
+          _this.setData({
+            id:res.data.id,
+            name:res.data.eval_name,
+          })
+          console.log(_this.data.id)
+        },
+        fail(res){
+          console.log(res)
+        }
+    })
   }
 })
