@@ -18,6 +18,14 @@ Page({
 
 
     infoList:[],
+
+    kind:[],    //类别
+    age:[],     //断代
+    class:[],   //器型
+
+    eval_age:'断代',  //断代
+    kind_:'类别',     //类别
+    eval_kind:'器型', //器型
   
     tabs:[
       {
@@ -37,7 +45,6 @@ Page({
       },
     ],
   
-
   },
 
   handleItemChange(e) {
@@ -50,21 +57,96 @@ Page({
     this.setData({
        tabs,
        infoList : '',
-       item: ''+e.detail.index
+       item: ''+e.detail.index,
     });
     //调用函数获取信息
     this.getCollections()
   },
 
+  //获取选定类别
+  getKind: function (e) {
+    let _this = this
+    const index = parseInt(e.detail);
+    console.log(index)
+    console.log(_this.data.kind[index])
+    this.setData({
+      kind_: _this.data.kind[index]
+    })
+    _this.getCollections()
+  },
+
+  //获取选定断代
+  getAge: function (e) {
+    let _this = this
+    const index = parseInt(e.detail);
+    console.log(index)
+    console.log(_this.data.age[index])
+    this.setData({
+      eval_age: _this.data.age[index]
+    })
+    _this.getCollections()
+  },
+
+  //获取选定器型
+  getClass: function (e) {
+    let _this = this
+    const index = parseInt(e.detail);
+    console.log(index)
+    console.log(_this.data.class[index])
+    this.setData({
+      eval_kind: _this.data.class[index]
+    })
+    _this.getCollections()
+  },
+
+
+
+
+  getInfo(){
+    let _this = this
+        wx.request({
+            url: 'https://www.shoolos.cn/api/list',
+            header: {
+                'content-type': 'application/json'
+            },
+            method: "GET",
+            success(res) {
+                console.log(res)
+                _this.setData({
+                  kind:res.data.code.kind,
+                  age:res.data.code.age,
+                  class:res.data.code.shape
+                })
+                console.log(_this.data.kind.kind)
+            }
+        })
+  },
+
   //获取藏品列表
   getCollections(){
     let _this = this
+    var t1 = _this.data.eval_age
+    var t2 = _this.data.kind_
+    var t3 = _this.data.eval_kind
+    if(_this.data.eval_age == '断代'){
+      t1 = ''
+    }
+    if(_this.data.kind_ =='类别'){
+      t2 = ''
+    }
+    if(_this.data.eval_kind == '器型'){
+      t3 = ''
+    }
+    console.log(t1)
     wx.request({
       url: 'https://www.shoolos.cn/api/collections/',
       method:'GET',
       data:{
         // open_id:app.globalData.openid,
         item: _this.data.item,
+        eval_age:t1,
+        kind:t2,
+        eval_kind:t3,
         open_id: app.globalData.openid,
       },
       success(res){
@@ -96,6 +178,7 @@ Page({
     })
   },
 
+
   
 
 
@@ -106,6 +189,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad () {
+    this.getInfo()
     this.getCollections()
   },
 

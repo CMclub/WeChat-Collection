@@ -287,7 +287,7 @@ uploadInfo() {
                     'text': _this.data.text,              //描述
                     'exten': exten,                       //图片后缀名
                     'id': _this.data.id,                  //id
-                    'num': num,                             //图片序号
+                    'num': num,                           //图片序号
                     'size': _this.data.size,              //尺寸
                     'condition': _this.data.condition,    //成色
                     'eval_name': _this.data.eval_name,    //名称

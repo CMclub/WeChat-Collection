@@ -1,5 +1,13 @@
 <!-- 最上边tab，自定义tab -->
 <tabs tabs="{{tabs}}" binditemChange="handleItemChange">
+	<!-- 下拉选框 -->
+  <view class="com-opt">
+		<select prop-array='{{age}}' nowText="{{eval_age}}" bind:getIndex="getAge"></select>
+		<select prop-array='{{kind}}' nowText="{{kind_}}" bind:getIndex="getKind"></select>
+    <select propArray='{{class}}' nowText='{{eval_kind}}' bind:getIndex="getClass"></select>
+	</view>
+    
+
     <!-- 整个浏览列表 -->
 	<view class="listWrap" >
         <!-- 单个展示容器 -->

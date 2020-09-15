@@ -1,0 +1,9 @@
+<!--pages/search/search.wxml-->
+<text>pages/search/search.wxml</text>
+<input bindblur="getKeyword"></input>
+<button class="sub-btn" type="primary" bindtap="search" disabled="{{}}">搜索</button>
+<scroll-view scroll-y="true">
+  <view class="contain-c" wx:for="{{list}}" data-item="{{item}}" bindtap="toInfo">
+    <view>{{item.eval_name}}</view>
+  </view>
+</scroll-view>

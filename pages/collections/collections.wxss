@@ -4,6 +4,13 @@
   margin-right: 5rpx;
 }
 
+.com-opt{
+  margin: 30rpx auto;
+  width: 90%;
+  height: 430rpx;
+  background-color: #ffffff;
+}
+
 .img{
   border-radius: 15rpx;
   background-size: cover;
