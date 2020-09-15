@@ -1,5 +1,0 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
-<input bindblur="getKeyword"></input>
-<button class="sub-btn" type="primary" bindtap="search" disabled="{{}}">搜索</button>
-<textarea></textarea>
